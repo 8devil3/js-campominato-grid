@@ -15,11 +15,11 @@ const widthHeightNumberBox = 32;
 btnPlay.addEventListener("click", play);
 
 
-function play() {
+function play() { // avvio gioco
 
-    reset();
+    reset(); //reset schermata
     
-    if (selectLevelInput.value == '1') {
+    if (selectLevelInput.value == '1') { //generazione griglia di gioco
         grid(lvEasy);
     } else if (selectLevelInput.value == '2') {
         grid(lvMedium);
@@ -29,13 +29,13 @@ function play() {
 }
 
 
-function reset() {
+function reset() { //reset schermata
     divContainer.classList.remove("lvEasy", "lvMedium", "lvHard"); //reset classi container
     divContainer.innerHTML = ""; //reset container
 }
 
 
-function grid(level) {
+function grid(level) { //generatore della griglia, arg -> int
 
     for (let x = 1; x <= level; x++) {
         divNumberBox = document.createElement("div");
