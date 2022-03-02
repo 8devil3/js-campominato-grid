@@ -39,7 +39,7 @@ function reset() { //reset container
 
 function grid(level) { //generatore della griglia, arg -> int
     
-    const divNumberBox;
+    let divNumberBox;
 
     for (let x = 1; x <= level; x++) {
         divNumberBox = document.createElement("div");
