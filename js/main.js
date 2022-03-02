@@ -1,7 +1,5 @@
 const divContainer = document.querySelector(".container");
 const selectLevelInput = document.querySelector("#level");
-let divNumberBox;
-
 const btnPlay = document.querySelector("#play");
 const btnReset = document.querySelector("#reset");
 
@@ -40,6 +38,8 @@ function reset() { //reset container
 
 
 function grid(level) { //generatore della griglia, arg -> int
+    
+    const divNumberBox;
 
     for (let x = 1; x <= level; x++) {
         divNumberBox = document.createElement("div");
