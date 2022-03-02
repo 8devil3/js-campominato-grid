@@ -87,34 +87,16 @@ button:hover {
     background-color: #f80;
 }
 
-p {
-    font-weight: 700;
-    min-height: 1.2rem;
-}
-
-input {
-    height: 2rem;
-    width: 70%;
-    margin: 0.5rem;
-    color: var(--grey);
-    border-radius: 100px;
-    padding: 0 1rem;
-    border: 0;
-}
-
-input::placeholder {
-    color: #999;
-}
-
-input:focus-visible{
-    outline: 2px var(--orange) solid;
-}
-
 select {
     display: block;
     width: 8rem;
     height: 1.5rem;
     margin: 0 0.5rem;
+    border-radius: 4px;
+}
+
+select:focus-visible{
+    outline: 2px var(--orange) solid;
 }
 
 .false{
