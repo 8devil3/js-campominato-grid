@@ -14,58 +14,40 @@ const widthHeightNumberBox = 32;
 
 btnPlay.addEventListener("click", play);
 
+
 function play() {
+
     reset();
-    grid(selectLevelInput.value);
-}
-
-function grid(level) {
-    if (level == "1") {
-        for (let x = 1; x <= lvEasy; x++) {
-            divNumberBox = document.createElement("div");
-            divNumberBox.innerHTML = x;
-            divContainer.append(divNumberBox);
-
-            divNumberBox.style.width = widthHeightNumberBox + "px";
-            divNumberBox.style.height = widthHeightNumberBox + "px";
-
-            divContainer.style.width =
-                widthHeightNumberBox * Math.sqrt(lvEasy) + "px";
-            divContainer.style.height =
-                widthHeightNumberBox * Math.sqrt(lvEasy) + "px";
-        }
-    } else if (level == "2") {
-        for (let x = 1; x <= lvMedium; x++) {
-            divNumberBox = document.createElement("div");
-            divNumberBox.innerHTML = x;
-            divContainer.append(divNumberBox);
-
-            divNumberBox.style.width = widthHeightNumberBox + "px";
-            divNumberBox.style.height = widthHeightNumberBox + "px";
-
-            divContainer.style.width =
-                widthHeightNumberBox * Math.sqrt(lvMedium) + "px";
-            divContainer.style.height =
-                widthHeightNumberBox * Math.sqrt(lvMedium) + "px";
-        }
+    
+    if (selectLevelInput.value == '1') {
+        grid(lvEasy);
+    } else if (selectLevelInput.value == '2') {
+        grid(lvMedium);
     } else {
-        for (let x = 1; x <= lvHard; x++) {
-            divNumberBox = document.createElement("div");
-            divNumberBox.innerHTML = x;
-            divContainer.append(divNumberBox);
-
-            divNumberBox.style.width = widthHeightNumberBox + "px";
-            divNumberBox.style.height = widthHeightNumberBox + "px";
-
-            divContainer.style.width =
-                widthHeightNumberBox * Math.sqrt(lvHard) + "px";
-            divContainer.style.height =
-                widthHeightNumberBox * Math.sqrt(lvHard) + "px";
-        }
+        grid(lvHard);
     }
 }
+
 
 function reset() {
     divContainer.classList.remove("lvEasy", "lvMedium", "lvHard"); //reset classi container
     divContainer.innerHTML = ""; //reset container
+}
+
+
+function grid(level) {
+
+    for (let x = 1; x <= level; x++) {
+        divNumberBox = document.createElement("div");
+        divNumberBox.innerHTML = x;
+
+        divContainer.append(divNumberBox);
+
+        divNumberBox.style.width = widthHeightNumberBox + "px";
+        divNumberBox.style.height = widthHeightNumberBox + "px";
+
+        divContainer.style.width = widthHeightNumberBox * Math.sqrt(level) + "px";
+        divContainer.style.height = widthHeightNumberBox * Math.sqrt(level) + "px";
+    }
+
 }
