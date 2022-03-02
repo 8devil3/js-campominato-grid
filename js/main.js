@@ -13,6 +13,7 @@ btnPlay.addEventListener('click', gridGeneration);
 
 function gridGeneration() {
 
+    divContainer.classList.remove('container-lvEasy','container-lvMedium','container-lvHard'); //reset classi container
     divContainer.innerHTML = ''; //reset container
     
     if (selectLevelInput.value == "1") {

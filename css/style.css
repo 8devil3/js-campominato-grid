@@ -21,13 +21,18 @@
     scroll-behavior: smooth;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 header{
     display: flex;
     justify-content: space-between;
     background-color: #1a1a1a;
     border-bottom: 1px var(--orange) solid;
     padding: 1rem;
-    margin-bottom: 3rem;
 }
 
 header img {
@@ -46,11 +51,9 @@ header > div {
 }
 
 .container {
-    margin: 0 auto;
+    margin: auto;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .container > div {
