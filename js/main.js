@@ -10,13 +10,17 @@ const lvHard = 100;
 
 
 
-btnPlay.addEventListener('click', gridGeneration);
+btnPlay.addEventListener('click', play);
 
-function gridGeneration() {
 
+function play() {
     reset();
-    
-    if (selectLevelInput.value == "1") {
+    grid(selectLevelInput.value);
+}
+
+
+function grid(level) {
+    if (level == "1") {
 
         for (let x = 1; x <= lvEasy; x++) {
             divNumberBox = document.createElement('div');
@@ -25,7 +29,7 @@ function gridGeneration() {
             divContainer.classList.add('lvEasy');
         }
 
-    } else if (selectLevelInput.value == "2") {
+    } else if (level == "2") {
 
         for (let x = 1; x <= lvMedium; x++) {
             divNumberBox = document.createElement('div');
@@ -44,7 +48,6 @@ function gridGeneration() {
         }
     }
 }
-
 
 function reset() {
     divContainer.classList.remove('lvEasy','lvMedium','lvHard'); //reset classi container
