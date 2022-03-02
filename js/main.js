@@ -3,6 +3,7 @@ const selectLevelInput = document.querySelector("#level");
 let divNumberBox;
 
 const btnPlay = document.querySelector("#play");
+const btnReset = document.querySelector("#reset");
 
 const lvEasy = 49;
 const lvMedium = 81;
@@ -13,6 +14,10 @@ const widthHeightNumberBox = 32;
 
 
 btnPlay.addEventListener("click", play);
+
+btnReset.addEventListener('click', function() { //ricarica della pagina
+    location.reload();
+})
 
 
 function play() { // avvio gioco
