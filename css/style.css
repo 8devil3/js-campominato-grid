@@ -16,8 +16,6 @@
     font-family: 'Segoe UI', sans-serif;
     font-size: 16px;
 
-    --numberBoxSize: 2rem;
-
     scroll-behavior: smooth;
 }
 
@@ -63,23 +61,6 @@ header > div {
     align-items: center;
     justify-content: center;
     background-color: var(--grey);
-    width: var(--numberBoxSize);
-    height: var(--numberBoxSize);
-}
-
-.lvEasy {
-    width: calc(var(--numberBoxSize) * 7);
-    height: calc(var(--numberBoxSize) * 7);
-}
-
-.lvMedium {
-    width: calc(var(--numberBoxSize) * 9);
-    height: calc(var(--numberBoxSize) * 9);
-}
-
-.lvHard {
-    width: calc(var(--numberBoxSize) * 10);
-    height: calc(var(--numberBoxSize) * 10);
 }
 
 .desc {
