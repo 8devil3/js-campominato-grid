@@ -67,17 +67,17 @@ header > div {
     height: var(--numberBoxSize);
 }
 
-.container-lvEasy {
+.lvEasy {
     width: calc(var(--numberBoxSize) * 7);
     height: calc(var(--numberBoxSize) * 7);
 }
 
-.container-lvMedium {
+.lvMedium {
     width: calc(var(--numberBoxSize) * 9);
     height: calc(var(--numberBoxSize) * 9);
 }
 
-.container-lvHard {
+.lvHard {
     width: calc(var(--numberBoxSize) * 10);
     height: calc(var(--numberBoxSize) * 10);
 }

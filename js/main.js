@@ -8,13 +8,13 @@ const lvEasy = 49;
 const lvMedium = 81;
 const lvHard = 100;
 
-btnPlay.addEventListener('click', gridGeneration);
 
+
+btnPlay.addEventListener('click', gridGeneration);
 
 function gridGeneration() {
 
-    divContainer.classList.remove('container-lvEasy','container-lvMedium','container-lvHard'); //reset classi container
-    divContainer.innerHTML = ''; //reset container
+    reset();
     
     if (selectLevelInput.value == "1") {
 
@@ -22,7 +22,7 @@ function gridGeneration() {
             divNumberBox = document.createElement('div');
             divNumberBox.innerHTML = x;
             divContainer.append(divNumberBox);
-            divContainer.classList.add('container-lvEasy');
+            divContainer.classList.add('lvEasy');
         }
 
     } else if (selectLevelInput.value == "2") {
@@ -31,7 +31,7 @@ function gridGeneration() {
             divNumberBox = document.createElement('div');
             divNumberBox.innerHTML = x;
             divContainer.append(divNumberBox);
-            divContainer.classList.add('container-lvMedium');
+            divContainer.classList.add('lvMedium');
         }
 
     } else {
@@ -40,9 +40,13 @@ function gridGeneration() {
             divNumberBox = document.createElement('div');
             divNumberBox.innerHTML = x;
             divContainer.append(divNumberBox);
-            divContainer.classList.add('container-lvHard');
+            divContainer.classList.add('lvHard');
         }
     }
 }
 
 
+function reset() {
+    divContainer.classList.remove('lvEasy','lvMedium','lvHard'); //reset classi container
+    divContainer.innerHTML = ''; //reset container
+}
