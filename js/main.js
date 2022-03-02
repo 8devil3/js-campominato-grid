@@ -29,9 +29,8 @@ function play() { // avvio gioco
 }
 
 
-function reset() { //reset schermata
-    divContainer.classList.remove("lvEasy", "lvMedium", "lvHard"); //reset classi container
-    divContainer.innerHTML = ""; //reset container
+function reset() { //reset container
+    divContainer.innerHTML = "";
 }
 
 
