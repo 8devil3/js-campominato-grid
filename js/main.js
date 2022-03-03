@@ -3,11 +3,11 @@ const selectLevelInput = document.querySelector("#level");
 const btnPlay = document.querySelector("#play");
 const btnReset = document.querySelector("#reset");
 
-const lvEasy = 49;
-const lvMedium = 81;
-const lvHard = 100;
+const lvEasy = 49; // livello facile
+const lvMedium = 81; // livello medio
+const lvHard = 100; // livello difficile
 
-const widthHeightNumberBox = 32;
+const widthHeightNumberBox = 32; // misura lato del singolo box dei numeri
 
 
 
@@ -20,7 +20,7 @@ btnReset.addEventListener('click', function() { //ricarica della pagina
 
 function play() { // avvio gioco
 
-    reset(); //reset schermata
+    divContainer.innerHTML = ""; //reset container
     
     if (selectLevelInput.value == '1') { //generazione griglia di gioco
         grid(lvEasy);
@@ -31,10 +31,6 @@ function play() { // avvio gioco
     }
 }
 
-
-function reset() { //reset container
-    divContainer.innerHTML = "";
-}
 
 
 function grid(level) { //generatore della griglia, arg -> int
