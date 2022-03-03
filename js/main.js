@@ -3,9 +3,9 @@ const selectLevelInput = document.querySelector("#level");
 const btnPlay = document.querySelector("#play");
 const btnReset = document.querySelector("#reset");
 
-const lvEasy = 49; // livello facile
+const lvEasy = 49; // livello difficile
 const lvMedium = 81; // livello medio
-const lvHard = 100; // livello difficile
+const lvHard = 100; // livello facile
 
 const widthHeightNumberBox = 32; // misura lato del singolo box dei numeri
 
