@@ -43,7 +43,7 @@ function grid(level) { //generatore della griglia, arg -> int
 
         divContainer.append(divNumberBox);
 
-        divNumberBox.style.width = widthHeightNumberBox;
+        divNumberBox.style.width = widthHeightNumberBox + "px";
         divNumberBox.style.height = widthHeightNumberBox + "px";
 
         divContainer.style.width = widthHeightNumberBox * Math.sqrt(level) + "px";
